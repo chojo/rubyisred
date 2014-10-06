@@ -1,4 +1,5 @@
 require 'redis'
+require 'rubbis/server'
 
 TEST_PORT = 6380
 
