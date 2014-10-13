@@ -10,7 +10,7 @@ end
 describe 'Rubbis', :acceptance do
   it 'responds to ping' do
     with_server do
-      expect(client.ping).to eq("OK")
+    expect(client.ping).to eq("OK")
     end
   end
 
@@ -19,6 +19,9 @@ describe 'Rubbis', :acceptance do
   end
 
   def with_server
+    # client.flushall
+    # yield
+    # return
     server_thread = Thread.new do
       server = Rubbis::Server.new(TEST_PORT)
       server.listen
